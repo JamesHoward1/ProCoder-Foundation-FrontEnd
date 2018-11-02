@@ -1,0 +1,78 @@
+
+/* styles for the header elements */
+/* JBH Question, look in to margin and padding in more detail, make sure you know what is happening */
+#header
+{
+    background-color: #ffffff;
+    margin: 20px;
+    text-align: right; // send the links to the right
+    font-size: 12px;
+    padding: 20px 0;
+}
+/* want to style the links specifically*/
+.headerLink
+{
+  margin: 10px;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 12px;
+  text-decoration: none; // removes all styling
+}
+/* google pages has an underline on hover  */
+.headerLink:hover {
+  text-decoration: underline;
+}
+
+/* sign in button */
+#signInLink
+{
+  background-color: #2D85F9;
+  color: #ffffff;
+  margin: 10px;
+  padding: 8px 12px;
+  font-family: arial;
+  font-weight: bold;
+  border-radius: 3px;
+
+}
+
+/* styles for the main search section */
+#searchSection
+{
+    background-color: #ccc;
+    padding: 20px;
+}
+
+#searchInputBox
+{
+  width: 200;
+  border-radius: 5px;
+}
+
+#searchSubmit
+{
+  background-color: #ccc;
+}
+
+div p {
+  font-family: arial, helvetica, sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: #ffc;
+    margin: 20px;
+    padding: 0;
+}
+
+.searchForm
+{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+}
+
+p {
+  font-family: arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: #ffc;
+    margin: 20px;
+    padding: 0;
+}
