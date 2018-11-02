@@ -1,27 +1,43 @@
 
+/* define colours*/
+:root {
+  --google-bg-grey: rgb(240, 240, 240);
+  --google-text-grey: rgb(100, 100, 100);
+  --google-shadow-grey: rgb(180, 180, 180);
+}
+
+body{
+  margin: 0px; /* there was a default margin, leaving a gap left, so set this to 0 */
+}
 /* styles for the header elements */
 /* JBH Question, look in to margin and padding in more detail, make sure you know what is happening */
 #header
 {
     background-color: #ffffff;
-    margin: 20px;
-    text-align: right; // send the links to the right
+    padding: 20px;
+    text-align: right; /* send the links to the right */
     font-size: 12px;
-    padding: 20px 0;
 }
 /* want to style the links specifically*/
-.headerLink
+/* actually, instead of a class here could use Nesting */
+#header a
 {
   margin: 10px;
   font-family: arial, helvetica, sans-serif;
   font-size: 12px;
-  text-decoration: none; // removes all styling
+  text-decoration: none; /* removes all styling */
+  /* JBH Question, why doesn't this work? specificity not right? */
+  /* when active, it sets the signInLink to grey */
+  /*color: var(--google-text-grey);*/
 }
 /* google pages has an underline on hover  */
-.headerLink:hover {
+#header a:hover {
   text-decoration: underline;
 }
-
+#header img
+{
+  vertical-align: middle;
+}
 /* sign in button */
 #signInLink
 {
@@ -32,47 +48,94 @@
   font-family: arial;
   font-weight: bold;
   border-radius: 3px;
-
 }
 
 /* styles for the main search section */
+/* set left padding, then centre */
 #searchSection
 {
-    background-color: #ccc;
-    padding: 20px;
+  margin: auto;
+  text-align: center; /* this centers the submit buttons later, what other ways of doing this? */
+  padding: 100px;
 }
 
-#searchInputBox
+#searchSection img
 {
-  width: 200;
-  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
 }
 
-#searchSubmit
+#searchSection input[type=text]
 {
-  background-color: #ccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:600px;
+  height: 40px;
+  border:1px solid var(--google-bg-grey);
+  box-shadow: 0px 2px 0px 0px var(--google-shadow-grey);
 }
 
-div p {
+#searchSection input[type=submit]
+{
+  background-color: var(--google-bg-grey);
+  padding: 10px 20px;
+  border: none;
+  color: var(--google-text-grey);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#footer
+{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:85px;   /* Height of the footer */
+  background-color: var(--google-bg-grey);
+  border-top: var(--google-shadow-grey);
   font-family: arial, helvetica, sans-serif;
-    font-size: 24px;
-    color: black;
-    background-color: #ffc;
-    margin: 20px;
-    padding: 0;
+  vertical-align: middle;
+  color: var(--google-text-grey);
 }
 
-.searchForm
+#footer p
 {
-  font-family: 'Times New Roman', Times, serif;
+  border-top: 1px solid var(--google-text-grey);
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  display: block;
+}
+/* repeating from header, maybe improve */
+#footer a
+{
   font-size: 14px;
+  text-decoration: none; /* removes all styling, why is this necessary? */
+  /* put colour back, could improve this?*/
+  color: var(--google-text-grey);
+  /* why does this margin need to be here? I put it in each column and everything gets messed up*/
+  padding: 12px;
 }
-
-p {
-  font-family: arial, helvetica, sans-serif;
-    font-size: 14px;
-    color: black;
-    background-color: #ffc;
-    margin: 20px;
-    padding: 0;
+/* google pages has an underline on hover  */
+#footer a:hover {
+  text-decoration: underline;
+}
+/* div columns for table */
+#footerLeftColumn
+{
+  text-align: left;
+  float: left;
+  width: 50%;
+}
+#footerRightColumn
+{
+  text-align: right;
+  float: left;
+  width: 50%;
 }
