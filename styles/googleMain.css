@@ -6,13 +6,12 @@
   --google-shadow-grey: rgb(180, 180, 180);
 }
 
-body{
+body {
   margin: 0px; /* there was a default margin, leaving a gap left, so set this to 0 */
 }
 /* styles for the header elements */
 /* JBH Question, look in to margin and padding in more detail, make sure you know what is happening */
-#header
-{
+.header {
     background-color: #ffffff;
     padding: 20px;
     text-align: right; /* send the links to the right */
@@ -20,8 +19,7 @@ body{
 }
 /* want to style the links specifically*/
 /* actually, instead of a class here could use Nesting */
-#header a
-{
+.header a {
   margin: 10px;
   font-family: arial, helvetica, sans-serif;
   font-size: 12px;
@@ -31,16 +29,15 @@ body{
   /*color: var(--google-text-grey);*/
 }
 /* google pages has an underline on hover  */
-#header a:hover {
+.header a:hover {
   text-decoration: underline;
 }
-#header img
-{
+
+.header img {
   vertical-align: middle;
 }
 /* sign in button */
-#signInLink
-{
+.signInLink {
   background-color: #2D85F9;
   color: #ffffff;
   margin: 10px;
@@ -52,15 +49,13 @@ body{
 
 /* styles for the main search section */
 /* set left padding, then centre */
-#searchSection
-{
+.searchSection {
   margin: auto;
   text-align: center; /* this centers the submit buttons later, what other ways of doing this? */
   padding: 100px;
 }
 
-#searchSection img
-{
+.searchSection img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -68,19 +63,18 @@ body{
 
 }
 
-#searchSection input[type=text]
-{
+.searchSection input[type=text] {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   width:600px;
   height: 40px;
   border:1px solid var(--google-bg-grey);
   box-shadow: 0px 2px 0px 0px var(--google-shadow-grey);
 }
 
-#searchSection input[type=submit]
-{
+.searchSection input[type=submit] {
   background-color: var(--google-bg-grey);
   padding: 10px 20px;
   border: none;
@@ -89,8 +83,7 @@ body{
   font-size: 12px;
 }
 
-#footer
-{
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -103,8 +96,7 @@ body{
   color: var(--google-text-grey);
 }
 
-#footer p
-{
+.footer p {
   border-top: 1px solid var(--google-text-grey);
   text-align: left;
   margin: 0;
@@ -112,9 +104,9 @@ body{
   font-size: 16px;
   display: block;
 }
+
 /* repeating from header, maybe improve */
-#footer a
-{
+.footer a {
   font-size: 14px;
   text-decoration: none; /* removes all styling, why is this necessary? */
   /* put colour back, could improve this?*/
@@ -122,19 +114,20 @@ body{
   /* why does this margin need to be here? I put it in each column and everything gets messed up*/
   padding: 12px;
 }
+
 /* google pages has an underline on hover  */
-#footer a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
+
 /* div columns for table */
-#footerLeftColumn
-{
+.footerLeftColumn {
   text-align: left;
   float: left;
   width: 50%;
 }
-#footerRightColumn
-{
+
+.footerRightColumn {
   text-align: right;
   float: left;
   width: 50%;
